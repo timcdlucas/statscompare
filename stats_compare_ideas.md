@@ -14,7 +14,7 @@ neural network drop out Vs not
 
 
 
-random forest Vs tree
+random forest Vs tree X
 
 
 random forest Vs neural network
