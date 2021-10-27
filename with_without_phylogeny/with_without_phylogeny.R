@@ -221,7 +221,8 @@ plotCV(m3_rf)
 plotCV(m3_rf) + 
     labs(title = 'No phylogenetic information',
          subtitle = paste0('R squared = ', round(max(m3_rf$results$Rsquared), 3))) +
-    theme(text = element_text(size=22))
+    theme(text = element_text(size=22)) +
+    ylim(0.6, 2.2)
 ggsave('without_phylo.png')
 
 m3_rf
@@ -265,7 +266,8 @@ plot(m3_rf_dist)
 plotCV(m3_rf_dist) + 
     labs(title = 'Phylogenetic distance as extra covs',
          subtitle = paste0('R squared = ', round(max(m3_rf_dist$results$Rsquared), 3))) +
-    theme(text = element_text(size=22))
+    theme(text = element_text(size=22)) +
+    ylim(0.6, 2.2)
 ggsave('with_phylo.png')
 
 m3_rf_dist
