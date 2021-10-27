@@ -14,16 +14,16 @@ neural network drop out Vs not
 
 
 
-random forest Vs tree X
+random forest Vs tree
 
 
-random forest Vs neural network
+random forest Vs neural network X
 
 
-imputation Vs extrapolation
+imputation Vs extrapolation X
 
 
-mean impute Vs remove
+mean impute Vs remove X
 
 
 
@@ -36,6 +36,7 @@ compute time histogram? for inla Vs mcmc?
 
 posterior Vs n with uninformative Vs weakly informative prior
 
+posterior contraction vs n with 2 vs 20 parameters.
 
 
 t.test with equal and unequal variance
