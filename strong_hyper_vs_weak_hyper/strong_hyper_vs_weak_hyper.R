@@ -65,7 +65,7 @@ pred_ii <- which(is.na(dmean_both$log_pr))
 
 #+ mixed_model
 priors <- list(mean.intercept = -2, prec.intercept = 1e-4)
-hyperprior <-  list(prec = list(prior="pc.prec", param = c(0.1, 0.01)))
+hyperprior <-  list(prec = list(prior="pc.prec", param = c(0.02, 0.01)))
 
 f <- log_pr ~ f(country, model = 'iid', hyper = hyperprior)  
 mm1 <- inla(f, data = dmean_both,
@@ -83,7 +83,7 @@ ggplot(dmean, aes(x = country, y = log_pr, fill = `Sample Size`)) +
     geom_point() +
     geom_point(data = predm1, aes(country, pred), inherit.aes = FALSE,
                colour = 'darkred', size = 8) +
-    ggtitle('p(sd > 0.1) = 0.01') +    
+    ggtitle('p(sd > 0.02) = 0.01') +    
     scale_fill_viridis_c() + 
     ylab('Log malaria prevalence') + 
     xlab('') +
@@ -102,7 +102,7 @@ ggsave('strong_hier.png')
 
 #+ mixed_model
 priors <- list(mean.intercept = -2, prec.intercept = 1e-4)
-hyperprior <-  list(prec = list(prior="pc.prec", param = c(0.1, 0.01)))
+hyperprior <-  list(prec = list(prior="pc.prec", param = c(1, 0.01)))
 
 f <- log_pr ~ f(country, model = 'iid', hyper = hyperprior)  
 mm1 <- inla(f, data = dmean_both,
@@ -120,7 +120,7 @@ ggplot(dmean, aes(x = country, y = log_pr, fill = `Sample Size`)) +
     geom_point() +
     geom_point(data = predm1, aes(country, pred), inherit.aes = FALSE,
                colour = 'darkred', size = 8) +
-    ggtitle('p(sd > 0.1) = 0.01') +    
+    ggtitle('p(sd > 1) = 0.01') +    
     scale_fill_viridis_c() + 
     ylab('Log malaria prevalence') + 
     xlab('') +
