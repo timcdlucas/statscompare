@@ -6,7 +6,7 @@ just comparisons of two similar things with a picture for each
 
 
 
-neural network 5 Vs 10 units
+neural network 5 Vs 10 units x
 
 neural network 1 Vs 2 deep
 
@@ -34,7 +34,7 @@ mcmc vs inla
 
 compute time histogram? for inla Vs mcmc?
 
-posterior Vs n with uninformative Vs weakly informative prior
+posterior Vs n with uninformative Vs weakly informative prior x
 
 posterior contraction vs n with 2 vs 20 parameters.
 
@@ -88,5 +88,16 @@ spde Vs random forest with locations
 random forest lat lon Vs random forest with locations
 
 
+
+Predictions selected for MAE vs predictions selected for RMSE.
+
+
+
+
+
+
+
+
+Coverage of RandomForest prediction intervals vs GP.
 
 
