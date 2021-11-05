@@ -26,22 +26,19 @@ ggplot(d, aes(x, y)) +
     geom_point() + 
     geom_smooth(method = 'lm') + 
     ggtitle(lmt) +
-    theme(text = element_text(size=27))
+    theme(text = element_text(size=25))
 ggsave('lm.png')
 
 
 rlm <- rlm(y ~ x, d)
-rlmt <- paste0('Least squares. beta = ', round(rlm$coefficients[2], 2), '. (true value = 1)')
+rlmt <- paste0('Robust lm. beta = ', round(rlm$coefficients[2], 2), '. (true value = 1)')
 
 ggplot(d, aes(x, y)) + 
     geom_point() + 
     geom_smooth(method = 'rlm') + 
     ggtitle(rlmt) +
-    theme(text = element_text(size=27))
+    theme(text = element_text(size=25))
 ggsave('rlm.png')
-
-
-
 
 
 
